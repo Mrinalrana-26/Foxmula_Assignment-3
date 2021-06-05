@@ -42,7 +42,7 @@ public class CustomException {
 		CustomException Exception1 = new CustomException();
 			try{  
 		      Exception1.process(n);  
-		      }catch(Exception e){
+		      }catch(InvalidException e){
 		          System.out.println(e);
 		          
 		      } 
