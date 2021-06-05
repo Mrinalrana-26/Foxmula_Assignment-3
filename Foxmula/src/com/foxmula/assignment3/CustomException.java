@@ -27,6 +27,12 @@ public class CustomException {
 			System.out.println(e);
 		}
 	}
+	
+	class InvalidException extends Exception{  
+	 InvalidException(String str){  
+	  super(str);  
+	 }  
+	} 
 	public static void main(String[] args) 
 	{
 		Scanner input=new Scanner (System.in);
@@ -34,7 +40,13 @@ public class CustomException {
 		System.out.println("Enter the  number:");
 		int n=input.nextInt();	
 		CustomException Exception1 = new CustomException();
-		Exception1.process(n);
+			try{  
+		      Exception1.process(n);  
+		      }catch(Exception e){
+		          System.out.println(e);
+		          
+		      } 
+		
 		input.close();
 	}
 	}
