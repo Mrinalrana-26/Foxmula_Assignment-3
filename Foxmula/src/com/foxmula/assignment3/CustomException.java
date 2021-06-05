@@ -1,7 +1,7 @@
 package com.foxmula.assignment3;
 import java.util.*;
 public class CustomException {
-	void process(int n)
+	void process(int n) throws InvalidException
 	{
 		int Flag=0;
 		try
@@ -14,7 +14,7 @@ public class CustomException {
 			
 			if(Flag==2 && n%2==1)
 			{
-				throw new ArithmeticException("Invalid Number"); 
+				throw new InvalidException("Invalid Number"); 
 			}
 			else
 			{
@@ -22,7 +22,7 @@ public class CustomException {
 			}
 		}
 		
-		catch(ArithmeticException e)
+		catch(InvalidException e)
 		{
 			System.out.println(e);
 		}
